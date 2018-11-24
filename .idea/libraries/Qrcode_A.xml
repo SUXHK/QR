@@ -1,8 +1,9 @@
 <component name="libraryTable">
   <library name="Qrcode_A">
     <CLASSES>
-      <root url="jar://$USER_HOME$/Downloads/QRCode-master/QRCode/libs/qrcode/Qrcode_A.jar!/" />
-      <root url="jar://$USER_HOME$/Downloads/QRCode-master/QRCode/libs/qrcode/qrcode_B.jar!/" />
+      <root url="jar://$PROJECT_DIR$/code/lib/Qrcode_A.jar!/" />
+      <root url="jar://$PROJECT_DIR$/code/lib/qrcode_B.jar!/" />
+      <root url="jar://$PROJECT_DIR$/code/lib/zxing 3.3.0.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
