@@ -19,7 +19,7 @@ public class CreateQRCode {
 
         String format = "png";
         //这里如果你想自动跳转的话，需要加上https://
-        String content = "laolu";
+        String content = "彭豪";
 
         HashMap hits = new HashMap();
         hits.put(EncodeHintType.CHARACTER_SET, "utf-8");//编码
@@ -32,7 +32,7 @@ public class CreateQRCode {
             BitMatrix bitMatrix = new MultiFormatWriter().encode(content, BarcodeFormat.QR_CODE, width, height, hits);
             //如果做网页版输出可以用输出到流
             //MatrixToImageWriter.writeToStream(matrix, format, stream);
-            Path path = new File("C:\\Users\\chris\\Desktop\\QR.png").toPath();
+            Path path = new File("C:\\Users\\John\\Desktop\\QR.png").toPath();
             MatrixToImageWriter.writeToPath(bitMatrix, format, path);
         } catch (Exception e) {
             // TODO Auto-generated catch block
