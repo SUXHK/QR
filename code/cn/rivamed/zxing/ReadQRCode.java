@@ -26,7 +26,7 @@ public class ReadQRCode {
 	public static void main(String[] args) {
 		try {
 			MultiFormatReader formatReader=new MultiFormatReader();
-			File file=new File("D:/zxingQRCode.png");
+			File file=new File("C:\\Users\\chris\\Desktop\\QQR.png");
 			BufferedImage image=ImageIO.read(file);
 			BinaryBitmap binaryBitmap=new BinaryBitmap(new HybridBinarizer(new BufferedImageLuminanceSource(image)));
 

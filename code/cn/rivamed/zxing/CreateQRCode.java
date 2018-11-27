@@ -19,7 +19,7 @@ public class CreateQRCode {
 
 		String format="png";
 		//这里如果你想自动跳转的话，需要加上https://
-		String content="https://github.com/hbbliyong/QRCode.git";
+		String content="掱";
 
 		HashMap hits=new HashMap();
 		hits.put(EncodeHintType.CHARACTER_SET, "utf-8");//编码
@@ -32,12 +32,12 @@ public class CreateQRCode {
 			BitMatrix bitMatrix=new MultiFormatWriter().encode(content, BarcodeFormat.QR_CODE, width, height,hits);
 			//如果做网页版输出可以用输出到流
 			//MatrixToImageWriter.writeToStream(matrix, format, stream);
-			Path path=new File("D:/zxingQRCode.png").toPath();
+			Path path=new File("C:\\Users\\chris\\Desktop\\QQR.png").toPath();
 			MatrixToImageWriter.writeToPath(bitMatrix, format, path);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		System.out.println("that is all");
+		System.out.println("生成成功！");
 	}
 }

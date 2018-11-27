@@ -1,4 +1,4 @@
-package com.rivamed.qrcode;
+package cn.rivamed.qrcode;
 
 import java.util.UUID;
 
