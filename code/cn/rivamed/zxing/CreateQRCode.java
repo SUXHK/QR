@@ -32,12 +32,12 @@ public class CreateQRCode {
 			BitMatrix bitMatrix=new MultiFormatWriter().encode(content, BarcodeFormat.QR_CODE, width, height,hits);
 			//如果做网页版输出可以用输出到流
 			//MatrixToImageWriter.writeToStream(matrix, format, stream);
-			Path path=new File("/home/chris/图片/QQR.png").toPath();
+			Path path=new File("C:\\Users\\John\\Desktop\\QQR.png").toPath();
 			MatrixToImageWriter.writeToPath(bitMatrix, format, path);
+			System.out.println("生成成功！");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		System.out.println("生成成功！");
 	}
 }
