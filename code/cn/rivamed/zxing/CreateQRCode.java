@@ -12,32 +12,32 @@ import com.google.zxing.common.BitMatrix;
 import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
 
 public class CreateQRCode {
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		int width=300;
-		int height=300;
+        int width = 300;
+        int height = 300;
 
-		String format="png";
-		//这里如果你想自动跳转的话，需要加上https://
-		String content="掱";
+        String format = "png";
+        //这里如果你想自动跳转的话，需要加上https://
+        String content = "掱";
 
-		HashMap hits=new HashMap();
-		hits.put(EncodeHintType.CHARACTER_SET, "utf-8");//编码
-		//纠错等级，纠错等级越高存储信息越少
-		hits.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.M);
-		//边距
-		hits.put(EncodeHintType.MARGIN, 2);
+        HashMap hits = new HashMap();
+        hits.put(EncodeHintType.CHARACTER_SET, "utf-8");//编码
+        //纠错等级，纠错等级越高存储信息越少
+        hits.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.M);
+        //边距
+        hits.put(EncodeHintType.MARGIN, 2);
 
-		try {
-			BitMatrix bitMatrix=new MultiFormatWriter().encode(content, BarcodeFormat.QR_CODE, width, height,hits);
-			//如果做网页版输出可以用输出到流
-			//MatrixToImageWriter.writeToStream(matrix, format, stream);
-			Path path=new File("C:\\Users\\John\\Desktop\\QQR.png").toPath();
-			MatrixToImageWriter.writeToPath(bitMatrix, format, path);
-			System.out.println("生成成功！");
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
+        try {
+            BitMatrix bitMatrix = new MultiFormatWriter().encode(content, BarcodeFormat.QR_CODE, width, height, hits);
+            //如果做网页版输出可以用输出到流
+            //MatrixToImageWriter.writeToStream(matrix, format, stream);
+            Path path = new File("C:\\Users\\John\\Desktop\\QQR.png").toPath();
+            MatrixToImageWriter.writeToPath(bitMatrix, format, path);
+            System.out.println("生成成功！");
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
 }
