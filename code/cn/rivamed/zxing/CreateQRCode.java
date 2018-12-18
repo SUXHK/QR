@@ -19,7 +19,7 @@ public class CreateQRCode {
 
         String format = "png";
         //这里如果你想自动跳转的话，需要加上https://
-        String content = "掱";
+        String content = "輸入簡體字,是點下面繁體字按鈕進行在線轉換";
 
         HashMap hits = new HashMap();
         hits.put(EncodeHintType.CHARACTER_SET, "utf-8");
