@@ -22,7 +22,8 @@ public class CreateQRCode {
         String content = "掱";
 
         HashMap hits = new HashMap();
-        hits.put(EncodeHintType.CHARACTER_SET, "utf-8");//编码
+        hits.put(EncodeHintType.CHARACTER_SET, "utf-8");
+        //编码
         //纠错等级，纠错等级越高存储信息越少
         hits.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.M);
         //边距
